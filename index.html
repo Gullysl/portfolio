@@ -9,12 +9,23 @@
 <body>
   <nav>
     <a href="/">Home</a>
-    <a href="/projects.html">Projects</a>
-    <a href="/contact.html">Contact</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <button id="theme-toggle">🌓 Toggle</button>
   </nav>
+  
   <main>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Im trying to make this a real website</p>
+    <h1>Java & Cloudflare Developer</h1>
+    <p>Building fast, scalable web solutions.</p>
   </main>
+
+  <!-- Place the script before the closing body tag -->
+  <script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script>
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+  </script>
 </body>
 </html>

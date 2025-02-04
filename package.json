@@ -1,0 +1,12 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "node compress-images.js",
+      "deploy": "npx wrangler pages deploy dist --project-name=portfolio"
+    },
+    "devDependencies": {
+      "glob": "^10.3.10",
+      "sharp": "^0.33.2"
+    }
+  }

@@ -1,27 +1,55 @@
 :root {
     --primary: #2c3e50;
     --secondary: #7f8c8d;
-  }
-  
-  nav {
+    --bg: white;
+    --text: #333;
+}
+
+.dark {
+    --bg: #1a1a1a;
+    --text: #e0e0e0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+nav {
     display: flex;
     gap: 1rem;
     padding: 1rem;
     background: var(--primary);
-  }
-  
-  nav a {
+}
+
+nav a {
     color: white;
     text-decoration: none;
-  }
-  
-  main {
-    max-width: 800px;
-    margin: 2rem auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
     padding: 1rem;
-  }
-  
-  /* Mobile-friendly */
-  @media (max-width: 768px) {
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.lazyload {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.lazyloaded {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
     nav { flex-direction: column; }
-  }
+}
