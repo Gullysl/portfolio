@@ -1,0 +1,27 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #7f8c8d;
+  }
+  
+  nav {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--primary);
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  /* Mobile-friendly */
+  @media (max-width: 768px) {
+    nav { flex-direction: column; }
+  }
